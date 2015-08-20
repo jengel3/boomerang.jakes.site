@@ -14,3 +14,19 @@ Description: Mute Instagram Followers
 Author: Jake0oo0 <jaek0oo0dev@gmail.com>
 Name: InstaMute
 
+Package: com.jake0oo0.noalertloop
+Version: 1.0.1-1
+Architecture: iphoneos-arm
+Maintainer: Jake0oo0 <jake0oo0dev@gmail.com>
+Installed-Size: 220
+Depends: mobilesubstrate
+Filename: debs//com.jake0oo0.noalertloop.deb
+Size: 30892
+MD5sum: 8411f4752a715024f153871b8f8edf9a
+SHA1: e97b3283b7db75b0a6dc30a8e4b5cb3b7ac50375
+SHA256: 0bac58bbd4820342c589f7d73a77e146a5e413fd3bb9dee5514c108a61ff36e0
+Section: Tweaks
+Description: Prevent websites from infinitely creating popups
+Author: Jake0oo0 <jake0oo0dev@gmail.com>
+Name: NoAlertLoop
+
