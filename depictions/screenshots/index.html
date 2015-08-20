@@ -101,7 +101,7 @@
 			return;
 		}
 
-		$.getJSON("/packages/" + dPackage + ".json", function(data) {
+		$.getJSON("../packages/" + dPackage + ".json", function(data) {
 			document.title = data.name + " by " + data.author;
 		  $(".package-name").text(data.name);
 		  $(".package-desc").text(data.description);
