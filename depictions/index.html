@@ -63,6 +63,8 @@
 				<p class="package-desc"></p>
 			</div>
 
+			<i><p class="package-author"></p></i>
+
 			<div class="row panel panel-default">
 			  <div class="panel-heading">Changelog <div class="label label-primary badge-label latest-version"></div></div>
 			  <div class="panel-body changelog-list">
@@ -97,7 +99,7 @@
 		if (!dPackage) {
 			$(".package-error").text("This package doesn't seem to exist!").css("display", "block");
 			$(".package-info").css("display", "none");
-			$(".package-name").text("Package not found");
+			$(".package-name").text("Not found");
 			return;
 		}
 
@@ -106,6 +108,7 @@
 		  $(".package-name").text(data.name);
 		  $(".package-desc").text(data.description);
 		  $(".latest-version").text(data.version + " (latest)");
+		  $(".package-author").text("by " + data.author);
 		  var cList = $(".changelog-list");
 		  var changes = data.changelog[data.version];
 		  for (var c in changes) {
