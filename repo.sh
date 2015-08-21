@@ -9,12 +9,11 @@ if [ $# -eq 0 ]; then
 fi
 
 if [ "$1" == "add" ]; then
-	echo "Adding new package...";
-
 	if [ "$#" -ne 3 ]; then
-	  echo "Usage: ./repo.sh add <package> <deb file>" >&2
+	  echo "Usage: $0 add <package> <deb file>" >&2
 	  exit 1
 	fi
+	echo "Adding new package...";
 
 	cp "$3" "$script_dir/debs/$2.deb"
 
