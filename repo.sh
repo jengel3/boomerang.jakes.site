@@ -1,8 +1,9 @@
 #!/bin/bash
 
 script_dir=$(dirname $0)
-cur="pwd"
+cur=$(pwd)
 
+cd "$script_dir"
 if [ $# -eq 0 ]; then
   echo "Usage: $0 <command>" >&2
   exit 1
@@ -28,14 +29,16 @@ for deb in debs/*.deb
 do
 	echo "Processing $deb...";
   dpkg-deb -f "$deb" >> Packages
-  dpkg-deb -f "$deb" Package | echo "Depiction: https://$(cat CNAME)/depiction?p=$(xargs -0)" >> Packages
+  dpkg-deb -f "$deb" Package | echo "Depiction: https://$(head -n 1 CNAME)/depiction?p=$(xargs -0)" >> Packages
   echo "" >> Packages
 done
 
 bzip2 < Packages > Packages.bz2
 
-cd "$script_dir"
 git add -A
 now=$(date +"%I:%M %m-%d-%Y")
 git commit -am "Packages Update - $now"
 git push
+
+echo "Updated Github repository with latest packages";
+cd "$cur"
