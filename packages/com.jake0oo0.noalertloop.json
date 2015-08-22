@@ -1,0 +1,23 @@
+{
+	"name": "NoAlertLoop",
+	"package": "com.jake0oo0.noalertloop",
+	"author": "Jake0oo0",
+	"version": "1.0.1",
+	"description": "Prevent malicious websites from creating an infinite amount of popups.",
+	"changelog": {
+		"1.0.0": [
+			"Initial Release"
+		],
+		"1.0.1": [
+			"Made patch similar to iOS 9 fix",
+			"Popup asking whether or not to mute a website's popups"
+		]
+	},
+	"screenshots": {
+		"noalertloop1.jpg": "Safari popup allowing the user to choose whether or not to mute a website",
+		"noalertloop2.jpg": "Popup in a 3rd party app (AlienBlue) doing the same thing"
+	},
+	"links": {
+		"<span class=\"glyphicon glyphicon-heart\"></span> Developer's Twitter": "https://twitter.com/itsjake88"
+	}
+}
