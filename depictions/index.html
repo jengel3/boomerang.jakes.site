@@ -33,6 +33,9 @@
 		.subshots:nth-child(1) {
 			margin-bottom: 10px;
 		}
+		.screenshots img {
+			border: thin solid #BEB6D8;
+		}
 		.package-buttons {
 			margin-top: 10px;
 		}
@@ -125,7 +128,8 @@
 		  		$(".screenshots").append("<div class=\"subshots col-xs-12\"></div>");
 		  	}
 
-		  	$(".screenshots .subshots:last-child").append("<img class=\"img-responsive col-xs-6\" src=\"/images/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\">");
+		  	$(".screenshots .subshots:last-child").append("<div class=\"col-xs-6\"></div>")
+		  	$(".screenshots .subshots:last-child .col-xs-6").append("<img class=\"img-responsive\" src=\"/images/" + screenshot + "\" title=\"" + screenshots[screenshot] + "\">");
 		  	count += 1;
 		  }
 
