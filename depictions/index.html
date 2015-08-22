@@ -24,9 +24,7 @@
 		.list-group-item:last-child {
 			margin-bottom: -1px;
 		}
-		.list-group {
-			margin-bottom: 0px;
-		}
+		
 		.subshots {
 			text-align: center;
 		}
@@ -141,7 +139,7 @@
 		  	var link = lKeys[l];
 				var wrap = $("<a href=\"" + links[link] + "\"><li class=\"list-group-item\"></li></a>");
 				wrap.find(".list-group-item").append($.parseHTML(link));
-				$(".package-buttons").append(wrap);
+				$(".package-buttons .list-group").append(wrap);
 		  }
 		})
 		.fail(function() {
@@ -152,10 +150,10 @@
 		});
 
 		function getParameterByName(name) {
-	    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-	    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-	        results = regex.exec(location.search);
-	    return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+		    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		        results = regex.exec(location.search);
+		    return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
 		}
 	});
 	</script>
