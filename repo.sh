@@ -34,10 +34,12 @@ do
   dpkg-deb -f "$deb" >> Packages
   md5sum "$deb" | echo "MD5sum: $(awk '{ print $1 }')" >> Packages
   wc -c "$deb" | echo "Size: $(awk '{ print $1 }')" >> Packages
+  echo "Filename: $deb" >> Packages
   dpkg-deb -f "$deb" Package | echo "Depiction: https://$(head -n 1 CNAME)/depiction?p=$(xargs -0)" >> Packages
-  echo "Filename: debs//$deb" >> Packages
   echo "" >> Packages
 done
+
+echo "" >> Packages; ## Add extra new line
 
 bzip2 < Packages > Packages.bz2
 
