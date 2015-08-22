@@ -32,7 +32,7 @@ for deb in debs/*.deb
 do
 	echo "Processing $deb...";
   dpkg-deb -f "$deb" >> Packages
-  md5sum "$deb" | echo "MD5sum: $(xargs -0)" >> Packages
+  md5sum "$deb" | echo "MD5sum: $(awk '{ print $1 }')" >> Packages
   wc -w "$deb" | echo "Size: $(xargs -0)" >> Packages
   dpkg-deb -f "$deb" Package | echo "Depiction: https://$(head -n 1 CNAME)/depiction?p=$(xargs -0)" >> Packages
   echo "" >> Packages
