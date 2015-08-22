@@ -11,6 +11,7 @@ Installed-Size: 192
 MD5sum: 08b8d645e3b8c191646e5e6a2153f154
 Size: 13692
 Depiction: https://boomerang.jakes.site/depiction?p=com.jake0oo0.instamute
+Filename: debs//debs/com.jake0oo0.instamute.deb
 
 Package: com.jake0oo0.noalertloop
 Name: NoAlertLoop
@@ -25,4 +26,5 @@ Installed-Size: 220
 MD5sum: 8411f4752a715024f153871b8f8edf9a
 Size: 30892
 Depiction: https://boomerang.jakes.site/depiction?p=com.jake0oo0.noalertloop
+Filename: debs//debs/com.jake0oo0.noalertloop.deb
 

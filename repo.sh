@@ -35,6 +35,7 @@ do
   md5sum "$deb" | echo "MD5sum: $(awk '{ print $1 }')" >> Packages
   wc -c "$deb" | echo "Size: $(awk '{ print $1 }')" >> Packages
   dpkg-deb -f "$deb" Package | echo "Depiction: https://$(head -n 1 CNAME)/depiction?p=$(xargs -0)" >> Packages
+  echo "Filename: debs//$deb" >> Packages
   echo "" >> Packages
 done
 
